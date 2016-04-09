@@ -55,3 +55,6 @@ group :test do
 end
 
 #gem 'pg'
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip', '~> 4.2'
+gem 'figaro'
