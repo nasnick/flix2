@@ -55,6 +55,12 @@ group :test do
 end
 
 #gem 'pg'
-gem 'aws-sdk', '< 2.0'
-gem 'paperclip', '~> 4.2'
-gem 'figaro'
+# gem 'aws-sdk', '< 2.0'
+# gem 'paperclip', '~> 4.2'
+# gem 'figaro'
+gem 's3_direct_upload'
+
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+gem 'redis', '~>3.2'

@@ -24,9 +24,18 @@ class MoviesController < ApplicationController
     @movie = Movie.new
   end
   
+  # def create
+  #   @movie = Movie.new(movie_params)
+  #   if @movie.save
+  #     redirect_to @movie, notice: "Movie successfully added!"
+  # else
+  #   render :new
+  #  end
+  # end
+
   def create
-    @movie = Movie.new(movie_params)
-    if @movie.save
+     CreateUser.perform_async
+      if @movie.save
       redirect_to @movie, notice: "Movie successfully added!"
   else
     render :new
@@ -45,6 +54,4 @@ private
     params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross, :cast, :director, :duration, :image_file_name)
   end
 end
-
-test
 

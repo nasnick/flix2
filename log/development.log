@@ -9841,3 +9841,2069 @@ Processing by MoviesController#index as HTML
   Rendered layouts/_sidebar.html.erb (0.2ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 170ms (Views: 169.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-10 11:26:04 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ArgumentError (wrong number of arguments (0 for 2..3)):
+  app/controllers/movies_controller.rb:49:in `test'
+  app/controllers/movies_controller.rb:49:in `<top (required)>'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.4ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-10 11:26:26 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-09 23:26:26.497753')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (127.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 392ms (Views: 366.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2016-04-10 11:26:27 +1200
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2016-04-10 11:26:29 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 6]]
+  Rendered movies/show.html.erb within layouts/application (25.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 180ms (Views: 175.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-10 11:26:33 +1200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-09 23:26:33.379920')  ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 150.2ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToMovies (20160409233146)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409233146"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-10 11:34:22 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-09 23:34:22.939684')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (58.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 421ms (Views: 338.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-10 11:34:23 +1200
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-10 11:34:28 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (3.0ms)
+  Rendered movies/_form.html.erb (33.0ms)
+  Rendered movies/new.html.erb within layouts/application (36.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 199ms (Views: 197.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-04-10 11:35:48 +1200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Simon Says", "description"=>"80 game - push the buttons in sequence. Bet Simon Morley (piddles) had one in a cosy rumpus room in some bluff hill house with sunny vanishing points over waipatiki.", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"9", "total_gross"=>"", "duration"=>"", "image_file_name"=>"", "cast"=>"", "director"=>""}, "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `image_content_type' for #<Movie:0x007fb36d5fe538>):
+  app/controllers/movies_controller.rb:29:in `create'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddImageToMovies (20160409233146)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20160409233146'
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+[0m
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-04-10 11:39:55 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.9) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/nickschofield/.rvm/rubies/ruby-2.0.0-p598/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/nickschofield/.rvm/rubies/ruby-2.0.0-p598/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/nickschofield/.rvm/rubies/ruby-2.0.0-p598/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToMovies (20160409233146)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409233146"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-04-10 11:40:55 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Simon Says", "description"=>"80 game - push the buttons in sequence. Bet Simon Morley (piddles) had one in a cosy rumpus room in some bluff hill house with sunny vanishing points over waipatiki.", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"9", "total_gross"=>"", "duration"=>"", "image_file_name"=>"", "cast"=>"", "director"=>""}, "commit"=>"Create Movie"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 46ms
+
+NoMethodError (undefined method `image_content_type' for #<Movie:0x007fc3ed082768>):
+  app/controllers/movies_controller.rb:29:in `create'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddImageToMovies (20160409233146)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20160409233146'
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToMovies (20160409233146)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409233146"]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddImageToMovies (20160409233146)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20160409233146'
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_reviews_on_movie_id' AND type='index'
+[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-10 11:43:22 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-09 23:43:23.308841')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (58.2ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_sidebar.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 434ms (Views: 352.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:23 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2016-04-10 11:43:24 +1200
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-12 21:09:00 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 19ms
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x007f8e2f92b390>):
+  app/models/movie.rb:3:in `<class:Movie>'
+  app/models/movie.rb:1:in `<top (required)>'
+  app/controllers/movies_controller.rb:3:in `index'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-12 21:09:01 +1200
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `has_attached_file' for #<Class:0x007f8e2de3db78>):
+  app/models/movie.rb:3:in `<class:Movie>'
+  app/models/movie.rb:1:in `<top (required)>'
+  app/controllers/movies_controller.rb:3:in `index'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-12 21:10:03 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:10:04.381443')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (61.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 431ms (Views: 401.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-04-12 21:10:05 +1200
+
+
+Started GET "/movies/6" for 127.0.0.1 at 2016-04-12 21:10:07 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 6]]
+  Rendered movies/show.html.erb within layouts/application (95.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 274ms (Views: 269.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-12 21:10:09 +1200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:10:09.857904')  ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 174ms (Views: 172.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-12 21:18:23 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:18:24.070177')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (89.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 1512ms (Views: 1478.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-04-12 21:18:25 +1200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:18:25.562887')  ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 272ms (Views: 269.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/add.png" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/arrow.png" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2016-04-12 21:18:26 +1200
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:18:36 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (3.8ms)
+  Rendered movies/_form.html.erb (43.5ms)
+  Rendered movies/new.html.erb within layouts/application (45.4ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined local variable or method `model_url' for #<#<Class:0x007f85c6909310>:0x007f85c6cb22f0>):
+    38:         <%= f.label :director %>
+    39:         <%= f.text_field :director %>
+    40:       </li>
+    41:       <%= s3_uploader_form callback_url: model_url, callback_param: "model[image_url]", id: "s3-uploader" do %>
+    42:   <%= file_field_tag :file, multiple: true, data: { url: s3_uploader_url } %>
+    43: <% end %>
+    44:     </ol>
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__1688536151812956333_70106271342260'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__1688536151812956333_70106271342260'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb___4508049178399990815_70106271286060'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (61.3ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (78.1ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:18:36 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered movies/_form.html.erb (20.2ms)
+  Rendered movies/new.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined local variable or method `model_url' for #<#<Class:0x007f85c6909310>:0x007f85c54e4e20>):
+    38:         <%= f.label :director %>
+    39:         <%= f.text_field :director %>
+    40:       </li>
+    41:       <%= s3_uploader_form callback_url: model_url, callback_param: "model[image_url]", id: "s3-uploader" do %>
+    42:   <%= file_field_tag :file, multiple: true, data: { url: s3_uploader_url } %>
+    43: <% end %>
+    44:     </ol>
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__1688536151812956333_70106259025180'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__1688536151812956333_70106259025180'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb___4508049178399990815_70106258858560'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.8ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:21:26 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (2.8ms)
+  Rendered movies/_form.html.erb (126.2ms)
+  Rendered movies/new.html.erb within layouts/application (130.5ms)
+Completed 500 Internal Server Error in 160ms
+
+ActionView::Template::Error (undefined local variable or method `model_url' for #<#<Class:0x007fd7a7842188>:0x007fd7a78400b8>):
+    38:         <%= f.label :director %>
+    39:         <%= f.text_field :director %>
+    40:       </li>
+    41:       <%= s3_uploader_form callback_url: model_url, callback_param: "model[image_url]", id: "s3-uploader" do %>
+    42:   <%= file_field_tag :file, multiple: true, data: { url: s3_uploader_url } %>
+    43: <% end %>
+    44:     </ol>
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb___140895855106734526_70282103262620'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb___140895855106734526_70282103262620'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__2465400156404080656_70282102937440'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:22:56 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (2.4ms)
+  Rendered movies/_form.html.erb (109.5ms)
+  Rendered movies/new.html.erb within layouts/application (113.7ms)
+Completed 500 Internal Server Error in 143ms
+
+ActionView::Template::Error (undefined local variable or method `model_url' for #<#<Class:0x007fb67c073f48>:0x007fb67c070ca8>):
+    38:         <%= f.label :director %>
+    39:         <%= f.text_field :director %>
+    40:       </li>
+    41: <%= s3_uploader_form callback_url: model_url,
+    42:                      callback_method: "POST",
+    43:                      callback_param: "model[image_url]",
+    44:                      key: "files/{timestamp}-{unique_id}-#{SecureRandom.hex}/${filename}",
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__1181481980131436040_70210851936360'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__1181481980131436040_70210851936360'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__2322760672567840763_70210871150140'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.7ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:22:57 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.7ms)
+  Rendered movies/_form.html.erb (25.4ms)
+  Rendered movies/new.html.erb within layouts/application (27.4ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined local variable or method `model_url' for #<#<Class:0x007fb67c073f48>:0x007fb679ddfe78>):
+    38:         <%= f.label :director %>
+    39:         <%= f.text_field :director %>
+    40:       </li>
+    41: <%= s3_uploader_form callback_url: model_url,
+    42:                      callback_method: "POST",
+    43:                      callback_param: "model[image_url]",
+    44:                      key: "files/{timestamp}-{unique_id}-#{SecureRandom.hex}/${filename}",
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__1181481980131436040_70210871536600'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__1181481980131436040_70210871536600'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__2322760672567840763_70210852677840'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:27:10 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (3.7ms)
+  Rendered movies/_form.html.erb (117.9ms)
+  Rendered movies/new.html.erb within layouts/application (123.2ms)
+Completed 500 Internal Server Error in 160ms
+
+ActionView::Template::Error (undefined local variable or method `model_url' for #<#<Class:0x007f8b0608e268>:0x007f8b0608c170>):
+    38:         <%= f.label :director %>
+    39:         <%= f.text_field :director %>
+    40:       </li>
+    41: <%= s3_uploader_form callback_url: model_url,
+    42:                      callback_method: "POST",
+    43:                      callback_param: "model[image_url]",
+    44:                      key: "files/{timestamp}-{unique_id}-#{SecureRandom.hex}/${filename}",
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__4000696841435475265_70117539556440'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__4000696841435475265_70117539556440'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb___2045059895595920610_70117521381220'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:27:27 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (10.8ms)
+  Rendered movies/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 672ms (Views: 670.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:28 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:27:29 +1200
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:28:44 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (81.7ms)
+  Rendered movies/new.html.erb within layouts/application (82.8ms)
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (undefined local variable or method `s3_uploader_url' for #<#<Class:0x007f8b0608e268>:0x007f8b083b8e78>):
+    47:                      id: "s3-uploader",
+    48:                      class: "upload-form",
+    49:                      data: {:key => :val} do %>
+    50:   <%= file_field_tag :file, multiple: true, data: { url: s3_uploader_url } %>
+    51: <% end %>
+    52:     </ol>
+    53:     <p>
+  app/views/movies/_form.html.erb:50:in `block (2 levels) in _app_views_movies__form_html_erb__4000696841435475265_70117557753300'
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__4000696841435475265_70117557753300'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__4000696841435475265_70117557753300'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb___2045059895595920610_70117521381220'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:30:22 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (21.2ms)
+  Rendered movies/new.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined local variable or method `c' for #<#<Class:0x007f8b0608e268>:0x007f8b08013a98>):
+    47:                      id: "s3-uploader",
+    48:                      class: "upload-form",
+    49:                      data: {:key => :val} do %>
+    50:   <%= file_field_tag :file, multiple: true, data: { url: "https://#{c.bucket}.s3.amazonaws.com/" } %>
+    51: <% end %>
+    52:     </ol>
+    53:     <p>
+  app/views/movies/_form.html.erb:50:in `block (2 levels) in _app_views_movies__form_html_erb__4000696841435475265_70117555770500'
+  app/views/movies/_form.html.erb:41:in `block in _app_views_movies__form_html_erb__4000696841435475265_70117555770500'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__4000696841435475265_70117555770500'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb___2045059895595920610_70117521381220'
+
+
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/nickschofield/.rvm/gems/ruby-2.0.0-p598/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:30:50 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (12.2ms)
+  Rendered movies/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 295ms (Views: 293.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:30:51 +1200
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-12 21:31:06 +1200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:31:06.701935')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 286ms (Views: 278.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:31:07 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:31:07 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:31:07 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:31:07 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:31:07 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:31:07 +1200
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2016-04-12 21:31:11 +1200
+Processing by MoviesController#new as HTML
+  Rendered shared/_errors.html.erb (0.9ms)
+  Rendered movies/_form.html.erb (81.9ms)
+  Rendered movies/new.html.erb within layouts/application (83.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 354ms (Views: 352.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2016-04-12 21:31:51 +1200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Jane of the Jungle", "description"=>"Jane of the Jungle -- bad story, good jungle", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"12", "total_gross"=>"20", "duration"=>"20", "image_file_name"=>"", "cast"=>"", "director"=>""}, "key"=>"files/{timestamp}-{unique_id}-c002cd666c104ccddf555405fe99c772/${filename}", "acl"=>"public-read", "AWSAccessKeyId"=>"AKIAIYINYKLR5NH2JFZQ", "policy"=>"eyJleHBpcmF0aW9uIjoiMjAxNi0wNC0xMlQxOTozMToxMVoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJmaWxlcy8iXSxbInN0YXJ0cy13aXRoIiwiJHgtcmVxdWVzdGVkLXdpdGgiLCIiXSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtdHlwZSIsIiJdLHsiYnVja2V0IjoibmFzbmljayJ9LHsiYWNsIjoicHVibGljLXJlYWQifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMSJ9XX0=", "signature"=>"5taEVQVQj5rOiFu8YdXrIBJXy3o=", "success_action_status"=>"201", "X-Requested-With"=>"xhr", "file"=>"12419382_10153845989739948_7847576106774168624_o.jpg", "commit"=>"Create Movie"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "movies" ("cast", "created_at", "description", "director", "duration", "image_file_name", "rating", "released_on", "title", "total_gross", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["cast", ""], ["created_at", "2016-04-12 09:31:51.763967"], ["description", "Jane of the Jungle -- bad story, good jungle"], ["director", ""], ["duration", "20"], ["image_file_name", ""], ["rating", "PG"], ["released_on", "2016-04-12"], ["title", "Jane of the Jungle"], ["total_gross", 20.0], ["updated_at", "2016-04-12 09:31:51.763967"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/movies/7
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:31:51 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 360ms (Views: 355.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2016-04-12 21:31:52 +1200
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:32:00.133887')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 234ms (Views: 232.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:32:00 +1200
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:35:51 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 280ms (Views: 277.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/7/edit" for 127.0.0.1 at 2016-04-12 21:36:01 +1200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (12.7ms)
+  Rendered movies/edit.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 279ms (Views: 277.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/movies/7" for 127.0.0.1 at 2016-04-12 21:36:10 +1200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Jane of the Jungle", "description"=>"Jane of the Jungle -- bad story, good jungle", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"12", "total_gross"=>"20", "duration"=>"20", "image_file_name"=>"", "cast"=>"", "director"=>""}, "key"=>"files/{timestamp}-{unique_id}-a5060eb2614acd21b2739bd397e768b9/${filename}", "acl"=>"public-read", "AWSAccessKeyId"=>"AKIAIYINYKLR5NH2JFZQ", "policy"=>"eyJleHBpcmF0aW9uIjoiMjAxNi0wNC0xMlQxOTozNjowMVoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJmaWxlcy8iXSxbInN0YXJ0cy13aXRoIiwiJHgtcmVxdWVzdGVkLXdpdGgiLCIiXSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtdHlwZSIsIiJdLHsiYnVja2V0IjoibmFzbmljayJ9LHsiYWNsIjoicHVibGljLXJlYWQifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMSJ9XX0=", "signature"=>"+g2Eg3Gi+UuktrfHT3qy81EvFco=", "success_action_status"=>"201", "X-Requested-With"=>"xhr", "file"=>"IMG_20160210_201045.jpg", "commit"=>"Update Movie", "id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/movies/7
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:36:10 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (68.4ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 349ms (Views: 347.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:36:11 +1200
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:39:07 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (92.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 540ms (Views: 495.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2016-04-12 21:39:09 +1200
+
+
+Started GET "/movies/7/edit" for 127.0.0.1 at 2016-04-12 21:39:11 +1200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered shared/_errors.html.erb (2.9ms)
+  Rendered movies/_form.html.erb (94.3ms)
+  Rendered movies/edit.html.erb within layouts/application (96.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 320ms (Views: 317.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/movies/7" for 127.0.0.1 at 2016-04-12 21:39:20 +1200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Jane of the Jungle", "description"=>"Jane of the Jungle -- bad story, good jungle", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"12", "total_gross"=>"20", "duration"=>"20", "image_file_name"=>"", "cast"=>"", "director"=>""}, "key"=>"files/{timestamp}-{unique_id}-32ab700abdf91f3f4ba6cb4836ed210e/${filename}", "acl"=>"public-read", "AWSAccessKeyId"=>"AKIAIYINYKLR5NH2JFZQ", "policy"=>"eyJleHBpcmF0aW9uIjoiMjAxNi0wNC0xMlQxOTozOToxMloiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJmaWxlcy8iXSxbInN0YXJ0cy13aXRoIiwiJHgtcmVxdWVzdGVkLXdpdGgiLCIiXSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtdHlwZSIsIiJdLHsiYnVja2V0IjoibmFzbmljayJ9LHsiYWNsIjoicHVibGljLXJlYWQifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMSJ9XX0=", "signature"=>"AYg8lqxvVfURp/9DO9mmLW0ayE0=", "success_action_status"=>"201", "X-Requested-With"=>"xhr", "file"=>"12419382_10153845989739948_7847576106774168624_o.jpg", "commit"=>"Update Movie", "id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/movies/7
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:39:20 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 235ms (Views: 233.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:39:21 +1200
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-12 21:39:23 +1200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:39:23.937415')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (101.1ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 345ms (Views: 343.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:39:24 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:39:24 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:39:24 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:39:24 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:39:24 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:39:24 +1200
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:44:50.232703')  ORDER BY released_on desc[0m
+  Rendered movies/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 306ms (Views: 304.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:50 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:44:51 +1200
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:44:53 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 273ms (Views: 270.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/7/edit" for 127.0.0.1 at 2016-04-12 21:46:35 +1200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (11.7ms)
+  Rendered movies/edit.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 309ms (Views: 306.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/movies/7" for 127.0.0.1 at 2016-04-12 21:46:44 +1200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Jane of the Jungle", "description"=>"Jane of the Jungle -- bad story, good jungle", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"12", "total_gross"=>"20", "duration"=>"20", "image_file_name"=>"", "cast"=>"", "director"=>""}, "key"=>"files/{timestamp}-{unique_id}-fb5db1aaa6ca541477ba9a1a5aee5483/${filename}", "acl"=>"public-read", "AWSAccessKeyId"=>"AKIAIYINYKLR5NH2JFZQ", "policy"=>"eyJleHBpcmF0aW9uIjoiMjAxNi0wNC0xMlQxOTo0NjozNVoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJmaWxlcy8iXSxbInN0YXJ0cy13aXRoIiwiJHgtcmVxdWVzdGVkLXdpdGgiLCIiXSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtdHlwZSIsIiJdLHsiYnVja2V0IjoibmFzbmljayJ9LHsiYWNsIjoicHVibGljLXJlYWQifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMSJ9XX0=", "signature"=>"v3a1bmpHqEGJiWyyF8TDPWHv4ug=", "success_action_status"=>"201", "X-Requested-With"=>"xhr", "file"=>"12419382_10153845989739948_7847576106774168624_o.jpg", "commit"=>"Update Movie", "id"=>"7"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/movies/7
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:46:44 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 280ms (Views: 277.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:46:45 +1200
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:52:13 +1200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (96.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 550ms (Views: 505.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:14 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:14 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:14 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2016-04-12 21:52:15 +1200
+
+
+Started GET "/movies/7/edit" for 127.0.0.1 at 2016-04-12 21:52:17 +1200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered shared/_errors.html.erb (3.2ms)
+  Rendered movies/_form.html.erb (97.0ms)
+  Rendered movies/edit.html.erb within layouts/application (98.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_sidebar.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 355ms (Views: 352.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/movies/7" for 127.0.0.1 at 2016-04-12 21:52:29 +1200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Jane of the Jungle", "description"=>"Jane of the Jungle -- bad story, good jungle", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"12", "total_gross"=>"20", "duration"=>"20", "image_file_name"=>"", "cast"=>"", "director"=>""}, "key"=>"files/{timestamp}-{unique_id}-8c9ade272a0b6e3725f6196e37e61ddc/${filename}", "acl"=>"public-read", "AWSAccessKeyId"=>"AKIAIYINYKLR5NH2JFZQ", "policy"=>"eyJleHBpcmF0aW9uIjoiMjAxNi0wNC0xMlQxOTo1MjoxN1oiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJmaWxlcy8iXSxbInN0YXJ0cy13aXRoIiwiJHgtcmVxdWVzdGVkLXdpdGgiLCIiXSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtdHlwZSIsIiJdLHsiYnVja2V0IjoibmFzbmljayJ9LHsiYWNsIjoicHVibGljLXJlYWQifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMSJ9XX0=", "signature"=>"BKj+gDwghHEMzk8EjiUy4DRC2yE=", "success_action_status"=>"201", "X-Requested-With"=>"xhr", "file"=>"12484653_10153533533938401_4321492159338069147_o.jpg", "commit"=>"Update Movie", "id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/movies/7
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:52:29 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?[0m  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 230ms (Views: 228.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:29 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:52:30 +1200
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-04-12 21:53:55 +1200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies"  WHERE (released_on <= '2016-04-12 09:53:55.541353')  ORDER BY released_on desc
+  Rendered movies/index.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 293ms (Views: 290.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/ironman.jpg" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/catwoman.jpg" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/batman-vs-godzilla.jpg" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/spiderman.jpg" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/batman.jpg" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/assets/superman.jpg" for 127.0.0.1 at 2016-04-12 21:53:56 +1200
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:57:54 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 460ms (Views: 457.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/7/edit" for 127.0.0.1 at 2016-04-12 21:57:57 +1200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (10.3ms)
+  Rendered movies/edit.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered layouts/_sidebar.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 329ms (Views: 325.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/7" for 127.0.0.1 at 2016-04-12 21:58:05 +1200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+MlkypPpS6kFDCZChNrQks8QPIHUi14DdTpkUjgaMw=", "movie"=>{"title"=>"Jane of the Jungle", "description"=>"Jane of the Jungle -- bad story, good jungle", "rating"=>"PG", "released_on(1i)"=>"2016", "released_on(2i)"=>"4", "released_on(3i)"=>"12", "total_gross"=>"20", "duration"=>"20", "image_file_name"=>"", "cast"=>"", "director"=>""}, "key"=>"files/{timestamp}-{unique_id}-78e129604697d89694f483ed29b99b16/${filename}", "acl"=>"public-read", "AWSAccessKeyId"=>"AKIAIYINYKLR5NH2JFZQ", "policy"=>"eyJleHBpcmF0aW9uIjoiMjAxNi0wNC0xMlQxOTo1Nzo1N1oiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJmaWxlcy8iXSxbInN0YXJ0cy13aXRoIiwiJHgtcmVxdWVzdGVkLXdpdGgiLCIiXSxbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwwLDUyNDI4ODAwXSxbInN0YXJ0cy13aXRoIiwiJGNvbnRlbnQtdHlwZSIsIiJdLHsiYnVja2V0IjoibmFzbmljayJ9LHsiYWNsIjoicHVibGljLXJlYWQifSx7InN1Y2Nlc3NfYWN0aW9uX3N0YXR1cyI6IjIwMSJ9XX0=", "signature"=>"rS8tG0L35LczjHxOUOhiLcErFq4=", "success_action_status"=>"201", "X-Requested-With"=>"xhr", "file"=>"IMG_20160210_201100.jpg", "commit"=>"Update Movie", "id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://0.0.0.0:3000/movies/7
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/7" for 127.0.0.1 at 2016-04-12 21:58:05 +1200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies"  WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "reviews"  WHERE "reviews"."movie_id" = ?  [["movie_id", 7]]
+  Rendered movies/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_sidebar.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 281ms (Views: 278.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/layout.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/normalize.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/elements.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/forms.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/buttons.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/s3_direct_upload_progress_bars.css?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery-fileupload/jquery.fileupload.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery-fileupload/basic.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/s3_direct_upload.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/jquery-fileupload/vendor/tmpl.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/reviews.js?body=1" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
+
+
+Started GET "/assets/placeholder.png" for 127.0.0.1 at 2016-04-12 21:58:06 +1200
