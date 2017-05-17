@@ -54,4 +54,13 @@ group :test do
   gem "capybara", "2.1.0"
 end
 
-gem 'pg'
+#gem 'pg'
+# gem 'aws-sdk', '< 2.0'
+# gem 'paperclip', '~> 4.2'
+# gem 'figaro'
+gem 's3_direct_upload'
+
+gem 'sidekiq'
+gem 'sinatra', require: false
+gem 'slim'
+gem 'redis', '~>3.2'

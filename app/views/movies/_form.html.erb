@@ -38,6 +38,17 @@
         <%= f.label :director %>
         <%= f.text_field :director %>
       </li>
+      <%= s3_uploader_form callback_method: "POST",
+                     callback_param: "model[image_url]",
+                     key: "files/{timestamp}-{unique_id}-#{SecureRandom.hex}/${filename}",
+                     key_starts_with: "files/",
+                     acl: "public-read",
+                     max_file_size: 50.megabytes,
+                     id: "s3-uploader",
+                     class: "upload-form",
+                     data: {:key => :val} do %>
+  <%= file_field_tag :file, multiple: true, data: { url: "http://nasnick.s3.amazonaws.com/" } %>
+<% end %>
     </ol>
     <p>
       <%= f.submit %>
